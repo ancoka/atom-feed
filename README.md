@@ -76,7 +76,7 @@ echo $atom;
 
 ##参考
 
-* [what about Atom](http://atomenabled.org/developers/syndication/#whatIsAtom)
+git status
 
 ##License
-MIT license
+MIT
