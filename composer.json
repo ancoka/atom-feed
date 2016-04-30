@@ -1,6 +1,6 @@
 {
     "name": "soyaf518/atom-feed",
-    "description": "a simple Atom feed builder",
+    "description": "A simple atom feed builder for PHP",
     "keywords": [
         "rss",
         "feed",
