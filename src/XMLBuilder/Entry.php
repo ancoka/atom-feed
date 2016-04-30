@@ -266,11 +266,11 @@ class Entry implements EntryInterface
         }
 
         if ($this->updated !== null) {
-            $xml->addChild('updated', date(c, $this->updated));
+            $xml->addChild('updated', date(DATE_ATOM, $this->updated));
         }
 
         if ($this->published !== null) {
-            $xml->addChild('published', date(c, $this->published));
+            $xml->addChild('published', date(DATE_ATOM, $this->published));
         }
 
         if ($this->rights !== null) {

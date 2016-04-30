@@ -265,7 +265,7 @@ class Feed implements FeedInterface
         }
 
         if ($this->updated !== null) {
-            $xml->addChild('updated', date(c, $this->updated));
+            $xml->addChild('updated', date(DATE_ATOM, $this->updated));
         }
 
         if ($this->rights !== null) {
