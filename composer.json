@@ -1,0 +1,30 @@
+{
+    "name": "soyaf518/atom-feed",
+    "description": "a simple Atom feed builder",
+    "keywords": [
+        "rss",
+        "feed",
+        "builder",
+        "atom"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "江小溅",
+            "email": "soyaf518@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+     "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "mockery/mockery": "dev-master"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Soyaf518\\": "src/"
+        }
+    }
+}
