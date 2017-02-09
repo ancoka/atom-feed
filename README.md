@@ -5,14 +5,14 @@ atom-feed是一个采用Atom协议的用于生成网站聚合应用信息的一�
 直接使用composer命令安装：
 
 ```
-composer require "soyaf518/atom-feed:~1.0"
+composer require "ancoka/atom-feed:~1.0"
 ```
 或者添加如下代码到composer.json文件中：
 
 ```
 {
     "require": {
-        "soyaf518/atom-feed" : "~1.0"
+        "ancoka/atom-feed" : "~1.0"
     }
 }
 ```
