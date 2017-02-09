@@ -1,5 +1,5 @@
 {
-    "name": "soyaf518/atom-feed",
+    "name": "ancoka/atom-feed",
     "description": "A simple atom feed builder for PHP",
     "keywords": [
         "rss",
@@ -10,8 +10,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "江小溅",
-            "email": "soyaf518@gmail.com"
+            "name": "ancoka",
+            "email": "jackun08@163.com"
         }
     ],
     "require": {
