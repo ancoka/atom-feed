@@ -1,14 +1,14 @@
 <?php
 
-namespace Soyaf518\XMLBuilder;
+namespace Ancoka\XMLBuilder;
 
 use SimpleXMLElement;
 
 /**
  * Interface EntryInterface
- * @package Soyaf518\XMLBuilder
- * @author  江小溅  <soyaf518@gmail.com>
- * @since  v1.0
+ * @package Ancoka\XMLBuilder
+ * @author ancoka <imancoka@gmail.com>
+ * @since v1.0
  */
 class Entry implements EntryInterface
 {
@@ -80,84 +80,98 @@ class Entry implements EntryInterface
     public function id($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
     public function title($title)
     {
         $this->title = $title;
+
         return $this;
     }
 
     public function subtitle($subtitle)
     {
         $this->subtitle = $subtitle;
+
         return $this;
     }
 
     public function summary($summary)
     {
         $this->summary = $summary;
+
         return $this;
     }
 
     public function content($content)
     {
         $this->content = $content;
+
         return $this;
     }
 
     public function category($category)
     {
         $this->categories[] = $category;
+
         return $this;
     }
 
     public function source($source)
     {
         $this->source = $source;
+
         return $this;
     }
 
     public function author($author)
     {
         $this->author = $author;
+
         return $this;
     }
 
     public function contributor($contributor)
     {
         $this->contributor = $contributor;
+
         return $this;
     }
 
     public function link($link)
     {
         $this->links[] = $link;
+
         return $this;
     }
 
     public function updated($updated)
     {
         $this->updated = $updated;
+
         return $this;
     }
 
     public function published($published)
     {
         $this->published = $published;
+
         return $this;
     }
 
     public function rights($rights)
     {
         $this->rights = $rights;
+
         return $this;
     }
 
     public function appendTo(FeedInterface $feed)
     {
         $feed->addEntry($this);
+
         return $this;
     }
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace Soyaf518\XMLBuilder;
+namespace Ancoka\XMLBuilder;
 
 /**
  * Interface ChannelInterface
- * @package Sumiu\XMLWriter
- * @author  江小溅  <soyaf518@gmail.com>
- * @since  v1.0
+ * @package Ancoka\XMLWriter
+ * @author ancoka <imancoka@gmail.com>
+ * @since v1.0
  */
 interface FeedInterface
 {

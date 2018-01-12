@@ -32,9 +32,9 @@ require_once 'vendor/autoload.php';
 <?php
 require_once dirname(__DIR__)."/vendor/autoload.php";
 
-use Soyaf518\XMLBuilder\Atom;
-use Soyaf518\XMLBuilder\Feed;
-use Soyaf518\XMLBuilder\Entry;
+use Ancoka\XMLBuilder\Atom;
+use Ancoka\XMLBuilder\Feed;
+use Ancoka\XMLBuilder\Entry;
 
 $atom = new Atom();
 
@@ -72,7 +72,7 @@ $entry->id('http://www.example.com/article/2')
 header('Content-type:application/atom+xml; charset=utf-8');
 echo $atom;
 ```
-上面代码涵盖常用用法，更多请查看接口文件源码：[AtomInterface](https://github.com/soyaf518/atom-feed/blob/master/src/XMLBuilder/AtomInterface.php)、[FeedInterface](https://github.com/soyaf518/atom-feed/blob/master/src/XMLBuilder/FeedInterface.php)和[EntryInterface](https://github.com/soyaf518/atom-feed/blob/master/src/XMLBuilder/EntryInterface.php)
+上面代码涵盖常用用法，更多请查看接口文件源码：[AtomInterface](https://github.com/ancoka/atom-feed/blob/master/src/XMLBuilder/AtomInterface.php)、[FeedInterface](https://github.com/ancoka/atom-feed/blob/master/src/XMLBuilder/FeedInterface.php)和[EntryInterface](https://github.com/ancoka/atom-feed/blob/master/src/XMLBuilder/EntryInterface.php)
 
 ##参考
 
