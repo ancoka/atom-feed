@@ -1,15 +1,15 @@
 <?php
 
-namespace Soyaf518\XMLBuilder;
+namespace Ancoka\XMLBuilder;
 
 use DOMDocument;
 use SimpleXMLElement;
 
 /**
  * Class Atom
- * @package Soyaf518\XMLBuilder
- * @author  江小溅  <soyaf518@gmail.com>
- * @since  v1.0
+ * @package Ancoka\XMLBuilder
+ * @author ancoka <imancoka@gmail.com>
+ * @since v1.0
  */
 class Atom implements AtomInterface
 {
@@ -26,6 +26,7 @@ class Atom implements AtomInterface
     public function addFeed(FeedInterface $feed)
     {
         $this->feeds[] = $feed;
+
         return $this;
     }
 

@@ -1,13 +1,14 @@
 <?php
 
-namespace Soyaf518\XMLBuilder;
+namespace Ancoka\XMLBuilder;
 
 use SimpleXMLElement;
+
 /**
  * Interface EntryInterface
- * @package Soyaf518\XMLBuilder
- * @author  江小溅  <soyaf518@gmail.com>
- * @since  v1.0
+ * @package Ancoka\XMLBuilder
+ * @author ancoka <imancoka@gmail.com>
+ * @since v1.0
  */
 class Feed implements FeedInterface
 {
@@ -72,91 +73,105 @@ class Feed implements FeedInterface
     protected $updated;
 
     /**
-     * @var string Entrys of the feed
+     * @var string Entries of the feed
      */
-    protected $entrys = []; 
+    protected $entries = [];
 
     public function id($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
     public function title($title)
     {
         $this->title = $title;
+
         return $this;
     }
 
     public function subtitle($subtitle)
     {
         $this->subtitle = $subtitle;
+
         return $this;
     }
 
     public function category($category)
     {
         $this->categories[] = $category;
+
         return $this;
     }
 
     public function link($link)
     {
         $this->links[] = $link;
+
         return $this;
     }
 
     public function author($author)
     {
         $this->author = $author;
+
         return $this;
     }
 
     public function contributor($contributor)
     {
         $this->contributor = $contributor;
+
         return $this;
     }
 
     public function generator($generator)
     {
         $this->generator = $generator;
+
         return $this;
     }
 
     public function icon($icon)
     {
         $this->icon = $icon;
+
         return $this;
     }
 
     public function logo($logo)
     {
         $this->logo = $logo;
+
         return $this;
     }
 
     public function rights($rights)
     {
         $this->rights = $rights;
+
         return $this;
     }
 
     public function updated($updated)
     {
         $this->updated = $updated;
+
         return $this;
     }
 
     public function addEntry(EntryInterface $entry)
     {
-        $this->entrys[] = $entry;
+        $this->entries[] = $entry;
+
         return $this;
     }
 
     public function appendTo(AtomInterface $atom)
     {
         $atom->addFeed($this);
+
         return $this;
     }
 
@@ -272,7 +287,7 @@ class Feed implements FeedInterface
             $xml->addChild('rights', $this->rights);
         }
 
-        foreach ($this->entrys as $entry) {
+        foreach ($this->entries as $entry) {
             $toDom = dom_import_simplexml($xml);
             $fromDom = dom_import_simplexml($entry->asXML());
             $toDom->appendChild($toDom->ownerDocument->importNode($fromDom, true));

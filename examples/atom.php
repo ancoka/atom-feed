@@ -1,9 +1,9 @@
 <?php
 require_once dirname(__DIR__)."/vendor/autoload.php";
 
-use Soyaf518\XMLBuilder\Atom;
-use Soyaf518\XMLBuilder\Feed;
-use Soyaf518\XMLBuilder\Entry;
+use Ancoka\XMLBuilder\Atom;
+use Ancoka\XMLBuilder\Feed;
+use Ancoka\XMLBuilder\Entry;
 
 $atom = new Atom();
 
