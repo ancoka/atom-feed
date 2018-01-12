@@ -76,7 +76,7 @@ echo $atom;
 
 ##参考
 
-* [About atom feed](http://atomenabled.org/developers/syndication/#whatIsAtom)
+* [About atom feed](https://tools.ietf.org/html/rfc4287)
 
 ##License
 MIT
