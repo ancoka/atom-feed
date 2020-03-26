@@ -197,6 +197,9 @@ class Entry implements EntryInterface
             if (isset($link['rel'])) {
                 $element->addAttribute('rel', $link['rel']);
             }
+            if (isset($link['type'])) {
+                $element->addAttribute('type', $link['type']);
+            }            
             if (isset($link['hreflang'])) {
                 $element->addAttribute('hreflang', $link['hreflang']);
             }
