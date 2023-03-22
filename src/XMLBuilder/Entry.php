@@ -17,6 +17,16 @@ class Entry implements EntryInterface
      */
     protected $id;
 
+	/**
+	 * @var string GUID of the entry
+	 */
+	protected $guid;
+
+	/**
+	 * @var bool isPermaLink of the GUID
+	 */
+	protected $isPermaLink;
+
     /**
      * @var string Title of the entry
      */
@@ -83,6 +93,14 @@ class Entry implements EntryInterface
 
         return $this;
     }
+
+	public function guid($guid, $isPermaLink = true)
+	{
+		$this->guid        = $guid;
+		$this->isPermaLink = $isPermaLink;
+
+		return $this;
+	}
 
     public function title($title)
     {
@@ -214,6 +232,13 @@ class Entry implements EntryInterface
         if ($this->id !== null) {
             $xml->addChild('id', $this->id);
         }
+
+		if ($this->guid !== null) {
+			$element = $xml->addChild('guid', $this->guid);
+			if (false === $this->isPermaLink) {
+				$element->addAttribute('isPermaLink', 'false');
+			}
+		}
 
         if ($this->summary !== null) {
             $xml->addChild('summary', $this->summary);
